@@ -20,7 +20,14 @@ const MovieListCard = () => {
 
     return (
         <div>
-            {oneMovie&&<div>{oneMovie.overview}</div>}
+            {oneMovie&&(
+                <div>
+                    <h4>{oneMovie.original_title}</h4>
+                    <img src={`https://image.tmdb.org/t/p/w200${oneMovie.poster_path}`} alt={oneMovie.original_title}/>
+                    <h4>{oneMovie.budget}</h4>
+                    <p>{oneMovie.overview}</p>
+                </div>
+            )}
         </div>
     );
 };
