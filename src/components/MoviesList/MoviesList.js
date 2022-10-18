@@ -1,29 +1,83 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {useSearchParams} from "react-router-dom";
 
 import {movieActions} from "../../redux";
 import MovieInfo from "../MovieInfo/MovieInfo";
-
+import FormFilter from "../FormFilter/FormFilter";
 
 
 const MoviesList = () => {
 
-    const {movies,loading,error} = useSelector(state => state.movieReducer);
+    const {movies, loading, error,pageNumber} = useSelector(state => state.movieReducer);
 
     const dispatch = useDispatch();
 
-    useEffect(()=>{
+    const [searchParams, setSearchParams] = useSearchParams({page:'1'});
 
-        dispatch(movieActions.getAll())
-        
 
-    },[])
+    const query = searchParams.get('query') || '';
+
+    const page = searchParams.get('page');
+
+    const [currentPage,setCurrentPage] = useState(null);
+
+console.log(currentPage)
+
+    useEffect(() => {
+
+        if (query) {
+
+            dispatch(movieActions.search({query}));
+
+        } else if (page) {
+
+
+            dispatch(movieActions.getAll({page}))
+
+            setCurrentPage(pageNumber);
+
+
+        }
+
+
+    }, [query,searchParams])
+
+
+
+    const prevPage=()=>{
+
+        setSearchParams(value=>({page:value.get('page')-1}))
+
+    }
+
+    const nextPage=()=>{
+
+        setSearchParams(value=>({page:+value.get('page')+1}))
+
+    }
+
 
     return (
         <div>
-            {loading&&<h1>Loading...</h1>}
-            {error&&<h1>Error!.</h1>}
-            {movies.map(movie=><MovieInfo key={movie.id} movie={movie}/>)}
+
+            <FormFilter setSearchParams={setSearchParams} query={query}/>
+
+
+            <div>
+
+                {loading && <h1>Loading...</h1>}
+                {error && <h1>Error!.</h1>}
+                {movies.map(movie => <MovieInfo key={movie.id} movie={movie}/>)}
+
+                <div>
+                    <button disabled={currentPage===2} onClick={prevPage}>Previous page</button>
+                    <button disabled={currentPage===499} onClick={nextPage}>Next page</button>
+                </div>
+
+            </div>
+
+
         </div>
     );
 };

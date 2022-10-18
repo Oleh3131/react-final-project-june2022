@@ -6,17 +6,18 @@ const initialState = {
     movies:[],
     loading:false,
     error:null,
-    oneMovie:null
+    oneMovie:null,
+    pageNumber:1
 };
 
 const getAll = createAsyncThunk(
     'movieSlice/getAll',
-    async (_, {rejectedWithValue}) => {
+    async ({page}, {rejectedWithValue}) => {
         try {
+            
+            const {data} = await movieService.getAll(page=`${page}`);
 
-            const {data} = await movieService.getAll();
-
-            return data.results;
+            return data;
 
         } catch (e) {
 
@@ -43,6 +44,27 @@ const getById = createAsyncThunk(
     }
 );
 
+const search = createAsyncThunk(
+    'movieSlice/search',
+    async ({query}, {rejectedWithValue}) => {
+        try {
+
+            const {data} = await movieService.search(query=`${query}`);
+
+
+            return data.results;
+
+
+
+        } catch (e) {
+
+            return rejectedWithValue(e.response.data);
+
+        }
+    }
+);
+
+
 let movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
@@ -50,7 +72,8 @@ let movieSlice = createSlice({
     extraReducers: builder => {
         builder
             .addCase(getAll.fulfilled,(state,action)=>{
-                state.movies = action.payload;
+                state.movies = action.payload.results;
+                state.pageNumber=action.payload.page
                 state.loading = false;
             })
             .addCase(getAll.pending,(state,action)=>{
@@ -63,6 +86,9 @@ let movieSlice = createSlice({
             .addCase(getById.fulfilled,(state,action)=>{
                 state.oneMovie = action.payload;
             })
+            .addCase(search.fulfilled,(state,action)=>{
+                state.movies=action.payload
+            })
     }
 });
 
@@ -71,7 +97,8 @@ const {reducer:movieReducer} = movieSlice;
 
 const movieActions={
     getAll,
-    getById
+    getById,
+    search
 }
 
 export {

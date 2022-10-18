@@ -1,16 +1,9 @@
 import React from 'react';
 import {Link, Outlet} from "react-router-dom";
-import {useForm} from "react-hook-form";
+
+
 
 const MainLayout = () => {
-
-    const {register, handleSubmit, reset} = useForm();
-
-    function submit(movie) {
-
-        console.log(movie)
-
-    }
 
     return (
         <div>
@@ -23,11 +16,6 @@ const MainLayout = () => {
                         <li><Link to={'genres'}>Genres</Link></li>
                     </ul>
                 </div>
-
-                <form onSubmit={handleSubmit(submit)}>
-                    <input type="text" placeholder={'movie title'} {...register('titleName')}/>
-                    <button>Search</button>
-                </form>
 
 
             </div>
