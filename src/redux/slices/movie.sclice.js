@@ -7,7 +7,7 @@ const initialState = {
     loading:false,
     error:null,
     oneMovie:null,
-    pageNumber:1
+    pageNumber:null
 };
 
 const getAll = createAsyncThunk(

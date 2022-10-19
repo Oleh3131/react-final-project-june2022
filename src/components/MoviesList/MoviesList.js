@@ -30,7 +30,7 @@ console.log(currentPage)
 
             dispatch(movieActions.search({query}));
 
-        } else if (page) {
+        } else if (searchParams=>"1" && searchParams<="500") {
 
 
             dispatch(movieActions.getAll({page}))
@@ -71,8 +71,8 @@ console.log(currentPage)
                 {movies.map(movie => <MovieInfo key={movie.id} movie={movie}/>)}
 
                 <div>
-                    <button disabled={currentPage===2} onClick={prevPage}>Previous page</button>
-                    <button disabled={currentPage===499} onClick={nextPage}>Next page</button>
+                    <button disabled={page==='1'} onClick={prevPage}>Previous page</button>
+                    <button disabled={page==='500'} onClick={nextPage}>Next page</button>
                 </div>
 
             </div>
