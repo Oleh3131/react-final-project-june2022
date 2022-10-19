@@ -7,7 +7,9 @@ const initialState = {
     loading:false,
     error:null,
     oneMovie:null,
-    pageNumber:null
+    pageNumber:null,
+    averageScore:null
+
 };
 
 const getAll = createAsyncThunk(
@@ -68,7 +70,11 @@ const search = createAsyncThunk(
 let movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        setAverage:(state,action)=>{
+            state.averageScore=action.payload
+        }
+    },
     extraReducers: builder => {
         builder
             .addCase(getAll.fulfilled,(state,action)=>{
@@ -93,12 +99,13 @@ let movieSlice = createSlice({
 });
 
 
-const {reducer:movieReducer} = movieSlice;
+const {reducer:movieReducer,actions:{setAverage}} = movieSlice;
 
 const movieActions={
     getAll,
     getById,
-    search
+    search,
+    setAverage
 }
 
 export {

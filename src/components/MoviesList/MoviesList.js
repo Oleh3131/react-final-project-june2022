@@ -22,8 +22,6 @@ const MoviesList = () => {
 
     const [currentPage,setCurrentPage] = useState(null);
 
-console.log(currentPage)
-
     useEffect(() => {
 
         if (query) {
@@ -41,8 +39,8 @@ console.log(currentPage)
         }
 
 
-    }, [query,searchParams])
-
+    }, [query,searchParams,currentPage])
+    
 
 
     const prevPage=()=>{

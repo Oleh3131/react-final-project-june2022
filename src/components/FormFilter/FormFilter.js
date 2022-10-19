@@ -13,8 +13,6 @@ const FormFilter = ({setSearchParams,query}) => {
 
         setSearchParams({query: queryForm});
 
-        // reset();
-
     }
 
     return (
