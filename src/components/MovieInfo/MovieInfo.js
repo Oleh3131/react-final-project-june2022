@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 
 import {StarsRating} from "../StarsRating/StarsRating";
 import {movieActions} from "../../redux";
+import css from './MovieInfo.module.css'
 
 
 
@@ -22,8 +23,8 @@ const MovieInfo = ({movie}) => {
     },[])
     
     return (
-        <div>
-            <div onClick={()=>navigate(`/movies/${id}`)}>
+        <div className={css.MainCardBlock}>
+            <div onClick={()=>navigate(`/movies/${id}`)} className={css.CardContentBlock}>
                 <h2>{title}</h2>
                 <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={title}/>
             </div>

@@ -5,6 +5,7 @@ import {useSearchParams} from "react-router-dom";
 import {movieActions} from "../../redux";
 import MovieInfo from "../MovieInfo/MovieInfo";
 import FormFilter from "../FormFilter/FormFilter";
+import css from './MoviesList.module.css'
 
 
 const MoviesList = () => {
@@ -14,6 +15,7 @@ const MoviesList = () => {
     const dispatch = useDispatch();
 
     const [searchParams, setSearchParams] = useSearchParams({page:'1'});
+
 
 
     const query = searchParams.get('query') || '';
@@ -57,12 +59,12 @@ const MoviesList = () => {
 
 
     return (
-        <div>
+        <div className={css.MainMovieBlock}>
 
             <FormFilter setSearchParams={setSearchParams} query={query}/>
 
 
-            <div>
+            <div className={css.MovieListWithButtons}>
 
                 {loading && <h1>Loading...</h1>}
                 {error && <h1>Error!.</h1>}

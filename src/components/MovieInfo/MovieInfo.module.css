@@ -1,0 +1,20 @@
+.MainCardBlock {
+
+    width: 17.5%;
+    padding: 10px;
+    box-sizing: border-box;
+    /*border: 3px solid yellow;*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: yellow;
+}
+
+.CardContentBlock {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
