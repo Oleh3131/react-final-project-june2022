@@ -39,5 +39,11 @@
     padding-bottom:2px;
     padding-right:2px;
     background: #f68787;
+}
+
+.CardContentBlock > img:hover {
+
+    border: 2px solid yellow;
+    transition: 500ms;
 
 }

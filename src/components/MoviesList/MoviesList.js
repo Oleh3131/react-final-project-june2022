@@ -72,9 +72,9 @@ const MoviesList = () => {
                     {movies.map(movie => <MovieInfo key={movie.id} movie={movie}/>)}
                 </div>
 
-                <div>
-                    <button disabled={page==='1'} onClick={prevPage}>Previous page</button>
-                    <button disabled={page==='500'} onClick={nextPage}>Next page</button>
+                <div className={css.ButtonBlock}>
+                    <button disabled={page==='1'} onClick={prevPage} className={css.PreviousButton}>Previous page</button>
+                    <button disabled={page==='500'} onClick={nextPage} className={css.NextButton}>Next page</button>
                 </div>
 
             </div>

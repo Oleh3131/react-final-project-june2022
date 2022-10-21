@@ -1,0 +1,11 @@
+
+.CardBlock{
+    display: flex;
+    flex-direction: column;
+    color: yellow;
+}
+
+
+.CardBlock>img{
+    width: 200px;
+}
