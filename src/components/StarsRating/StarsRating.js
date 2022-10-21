@@ -3,8 +3,6 @@ import React from 'react';
 import './StarsRating.css'
 
 
-
-
 const StarsRating = ({vote_average}) => {
 
     const ratings = document.querySelectorAll('.Rating');
@@ -15,12 +13,10 @@ const StarsRating = ({vote_average}) => {
 
     }
 
+    if (vote_average === 0) {
 
-    if(vote_average===0){
-
-        vote_average=2
+        vote_average = 2
     }
-
 
     //Основна функція
     function initRatings() {
@@ -37,7 +33,6 @@ const StarsRating = ({vote_average}) => {
 
         }
 
-
         // Ініціалізуєм конкретний рейтинг
         function initRating(rating) {
 
@@ -50,7 +45,7 @@ const StarsRating = ({vote_average}) => {
 
         //Ініціалізуєм змінні
 
-        function initRatingVariables(rating){
+        function initRatingVariables(rating) {
 
             ratingActive = rating.querySelector('.RatingActive');
 
@@ -60,18 +55,16 @@ const StarsRating = ({vote_average}) => {
 
         //Змінюємо ширину активних зірок
 
-        function setRatingActiveWidth(index=ratingValue.innerText){
+        function setRatingActiveWidth(index = ratingValue.innerText) {
 
-            const ratingActiveWidth =index/0.1;
+            const ratingActiveWidth = index / 0.1;
 
             ratingActive.style.width = `${ratingActiveWidth}%`;
 
-
         }
-
-
-
     }
+
+
     return (
         <div>
             <div className={"Rating"}>
