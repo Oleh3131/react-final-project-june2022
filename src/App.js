@@ -8,6 +8,7 @@ import Genres from "./components/Genres/Genres";
 import MovieListCard from "./components/MovieListCard/MovieListCard";
 import ListOfMoviesByGenre from "./components/ListOfMoviesByGenre/ListOfMoviesByGenre";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
+import GenreDetailsInfo from "./components/GenreDetailsInfo/GenreDetailsInfo";
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                 <Route path={'genres'} element={<Genres/>}>
                     <Route path={':id'} element={<ListOfMoviesByGenre/>}/>
                 </Route>
+                <Route path={'/genres/:id/details'} element={<GenreDetailsInfo/>}/>
             </Route>
             <Route path={'*'} element={<NotFoundPage/>}/>
         </Routes>

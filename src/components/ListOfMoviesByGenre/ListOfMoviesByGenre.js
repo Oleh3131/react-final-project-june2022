@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {useLocation, useParams} from "react-router-dom";
 
 import {movieService} from "../../services";
+import GenreBadge from "../GenreBadge/GenreBadge";
+import css from './ListOfMoviesByGenre.module.css'
 
 
 const ListOfMoviesByGenre = () => {
@@ -29,8 +31,8 @@ const ListOfMoviesByGenre = () => {
         }
     }
     return (
-        <div>
-            {movies.map(movie => <div key={movie.id}><h4>{movie.original_title}</h4> <h4>{nameOfGenre}</h4></div>)}
+        <div className={css.BadgeCard}>
+            {movies.map(movie => <GenreBadge key={movie.id} movie={movie} nameOfGenre={nameOfGenre}/>)}
         </div>
     );
 };

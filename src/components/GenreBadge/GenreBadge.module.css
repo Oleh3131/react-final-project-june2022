@@ -1,0 +1,77 @@
+
+.GenreMainCard{
+    width: 18.5%;
+    min-height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    row-gap: 10px;
+
+}
+
+
+.GenreCardContent{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+}
+
+
+.GenreCardContent > h2 {
+
+    color: gold;
+    margin-bottom: 10px;
+    text-shadow: #ff0808 5px 0 5px;
+}
+
+
+.GenreCardContent > img {
+
+    border-radius: 12px;
+    border-bottom:2px solid #f67070;
+    border-right:2px solid #f57c7c;
+    padding-bottom:2px;
+    padding-right:2px;
+    background: #f68787;
+}
+
+.GenreCardContent > img:hover {
+
+    border: 2px solid yellow;
+    transition: 500ms;
+
+}
+
+.GenreBadge{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 150px;
+    height: 20px;
+    margin-top: -200px;
+    margin-right: -70px;
+    background: #ea8787;
+    position: absolute;
+    border: 2px solid red;
+    border-bottom-left-radius:100% ;
+    border-top-left-radius:100% ;
+
+
+}
+
+
+.GenreCardContent h4{
+    color: gold;
+}
+

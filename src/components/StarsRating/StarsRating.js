@@ -15,6 +15,7 @@ const StarsRating = ({vote_average}) => {
 
     }
 
+
     if(vote_average===0){
 
         vote_average=2

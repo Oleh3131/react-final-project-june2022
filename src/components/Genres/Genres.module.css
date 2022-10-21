@@ -1,0 +1,31 @@
+.MainGenreBlock{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.MainGenreBlock>hr{
+
+    width: 80%;
+    background: gold;
+
+}
+
+.GenreBlock{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 300px;
+    row-gap: 10px;
+    column-gap: 10px;
+
+}

@@ -5,7 +5,8 @@ import {genreService} from "../../services";
 const initialState = {
     genres: [],
     loading:false,
-    error:null
+    error:null,
+    averageScore:null
 };
 
 const getAll = createAsyncThunk(
@@ -31,7 +32,11 @@ const getAll = createAsyncThunk(
 const genreSlice = createSlice({
     name: 'genreSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        setAverage:(state,action)=>{
+            state.averageScore=action.payload
+        }
+    },
     extraReducers: builder => {
         builder
             .addCase(getAll.fulfilled,(state,action)=>{
@@ -49,10 +54,11 @@ const genreSlice = createSlice({
 });
 
 
-const {reducer:genreReducer} = genreSlice;
+const {reducer:genreReducer,actions:{setAverage}} = genreSlice;
 
 const genreAction={
-    getAll
+    getAll,
+    setAverage
 }
 
 export {
