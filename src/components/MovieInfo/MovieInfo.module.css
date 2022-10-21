@@ -1,13 +1,17 @@
 .MainCardBlock {
 
-    width: 17.5%;
-    padding: 10px;
-    box-sizing: border-box;
-    /*border: 3px solid yellow;*/
+    width: 18.5%;
+    min-height: 370px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: yellow;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    row-gap: 10px;
+
 }
 
 .CardContentBlock {
@@ -17,4 +21,23 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.CardContentBlock > h2 {
+
+    color: gold;
+    margin-bottom: 10px;
+    text-shadow: #ff0808 5px 0 5px;
+}
+
+
+.CardContentBlock > img {
+
+    border-radius: 12px;
+    border-bottom:2px solid #f67070;
+    border-right:2px solid #f57c7c;
+    padding-bottom:2px;
+    padding-right:2px;
+    background: #f68787;
+
 }

@@ -66,9 +66,11 @@ const MoviesList = () => {
 
             <div className={css.MovieListWithButtons}>
 
-                {loading && <h1>Loading...</h1>}
-                {error && <h1>Error!.</h1>}
-                {movies.map(movie => <MovieInfo key={movie.id} movie={movie}/>)}
+                <div className={css.MovieCardList}>
+                    {loading && <h1>Loading...</h1>}
+                    {error && <h1>Error!.</h1>}
+                    {movies.map(movie => <MovieInfo key={movie.id} movie={movie}/>)}
+                </div>
 
                 <div>
                     <button disabled={page==='1'} onClick={prevPage}>Previous page</button>

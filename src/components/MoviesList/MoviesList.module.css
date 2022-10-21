@@ -4,16 +4,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 50px;
+    row-gap: 30px;
 
 }
 
 .MovieListWithButtons {
     display: flex;
+   flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.MovieCardList{
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
-    row-gap: 20px;
-    column-gap: 20px;
+    row-gap: 60px;
+    column-gap: 60px;
     justify-content: center;
     align-items: center;
 }

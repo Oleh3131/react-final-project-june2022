@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Times New Roman', sans-serif;
 }
 
 body {
@@ -38,7 +39,6 @@ body {
     justify-content: space-evenly;
     width: 100%;
     min-height: 100px;
-    /*border: 3px solid gold;*/
     background: linear-gradient(#ce361b 3%, rgb(5, 2, 2) 70%);
 }
 
@@ -55,6 +55,15 @@ body {
 .UlBlock li {
 
     list-style-type: none;
+    transition: 500ms;
+
+}
+
+.UlBlock li:hover {
+
+    list-style-type: none;
+    transition: 1000ms;
+    transform: scale(1.1);
 
 }
 

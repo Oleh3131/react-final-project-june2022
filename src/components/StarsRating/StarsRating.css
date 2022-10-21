@@ -8,6 +8,8 @@
     align-items: center;
     font-size: 22px;
     line-height: 0.75;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .RatingBody {
@@ -60,4 +62,7 @@
     font-size: 50%;
     line-height: 1;
     padding: 0 0 0 10px;
+}
+.RatingValue>h4 {
+    color: yellow;
 }
