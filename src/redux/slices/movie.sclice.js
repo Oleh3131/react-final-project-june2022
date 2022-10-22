@@ -8,8 +8,7 @@ const initialState = {
     error:null,
     oneMovie:null,
     pageNumber:null,
-    averageScore:null
-
+    averageScore:null,
 };
 
 const getAll = createAsyncThunk(
@@ -65,7 +64,6 @@ const search = createAsyncThunk(
         }
     }
 );
-
 
 let movieSlice = createSlice({
     name: 'movieSlice',

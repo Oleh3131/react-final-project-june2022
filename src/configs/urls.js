@@ -4,7 +4,8 @@ const urls = {
     movies: '/discover/movie',
     genres: '/genre/movie/list',
     oneMovie:'/movie',
-    search:'./search/movie'
+    search:'./search/movie',
+    currentMovie:'movie/now_playing'
 }
 
 export {

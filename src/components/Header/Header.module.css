@@ -1,6 +1,36 @@
-.HeaderBlock{
+
+.HeaderBlock {
     width: 100%;
     height: 100%;
     color: yellow;
+    display: flex;
+
+}
+
+body::-webkit-scrollbar, .HeaderList::-webkit-scrollbar {
+    background: transparent;
+}
+
+body, .HeaderList {
+    -ms-overflow-style: none;
+}
+
+.HeaderBlockList {
+
+    width: 1200px;
+    margin: auto;
+    background: snow;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+.HeaderList {
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    cursor: pointer;
+    overflow-x: scroll;
 
 }
