@@ -19,7 +19,6 @@ const GenreDetailsInfo = () => {
         vote_count
     } = state.movie;
 
-    console.log(state.movie)
 
     return (
         <div className={css.CardBlock}>

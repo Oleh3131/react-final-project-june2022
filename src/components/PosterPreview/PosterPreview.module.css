@@ -1,11 +1,27 @@
 
+.MainCard{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.MainCard >h2{
+
+    color: yellow;
+    margin-bottom: 40px;
+}
+
 .CardBlock{
     display: flex;
     flex-direction: row;
     color: yellow;
     margin: 60px;
     padding: 60px;
-    background: #202a5e;
+    background: #806c6c;
     row-gap: 10px;
     column-gap: 60px;
     border-radius: 15px;

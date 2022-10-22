@@ -3,7 +3,6 @@ import { useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
 import {movieActions} from "../../redux";
-import css from './MovieListCard.module.css'
 import PosterPreview from "../PosterPreview/PosterPreview";
 
 

@@ -2,19 +2,19 @@ import React, {useEffect, useRef} from 'react';
 
 import css from './HeaderList.module.css'
 
-const HeaderList = ({movie,reference}) => {
+const HeaderList = ({movie, reference}) => {
 
-    const {id,original_title,poster_path} = movie;
+    const {id, original_title, poster_path} = movie;
 
 
-    useEffect(()=>{
+    useEffect(() => {
 
         const el = reference.current;
 
-        if(el){
+        if (el) {
 
 
-            const onWheel=(e)=>{
+            const onWheel = (e) => {
 
                 e.preventDefault();
 
@@ -22,23 +22,23 @@ const HeaderList = ({movie,reference}) => {
 
                     left: el.scrollLeft + e.deltaY + 10,
 
-                    behavior:'smooth'
+                    behavior: 'smooth'
                 })
             }
 
-            el.addEventListener('wheel',onWheel)
+            el.addEventListener('wheel', onWheel)
 
-            return ()=>el.removeEventListener('wheel',onWheel)
+            return () => el.removeEventListener('wheel', onWheel)
         }
 
-    },[])
+    }, [])
 
     return (
         <div className={css.ContentBlock}>
-            <div >
-                <h2>{original_title}</h2>
-                <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={original_title}/>
-            </div>
+
+            <h4>{original_title}</h4>
+            <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={original_title}/>
+
         </div>
     );
 };
