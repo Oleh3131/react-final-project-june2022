@@ -5,7 +5,6 @@ import css from './GenreDetailsInfo.module.css'
 import Reviews from "../Reviews/Reviews";
 import {axiosService} from "../../services";
 
-
 const GenreDetailsInfo = () => {
 
     const {state} = useLocation();
@@ -24,21 +23,19 @@ const GenreDetailsInfo = () => {
         vote_count
     } = state.movie;
 
-
-
     useEffect(() => {
 
         axiosService.get(`/movie/${id}/reviews`).then(({data}) => setReviews(data.results))
 
     }, [id])
 
-
     return (
         <div className={css.MainCard}>
             <div className={css.CardBlock}>
 
                 <div className={css.ImgBlock}>
-                    <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={original_title}/>
+                    <img src={`https://image.tmdb.org/t/p/w200${poster_path}`}
+                         alt={original_title}/>
                 </div>
 
                 <div className={css.TextBlock}>
@@ -58,7 +55,6 @@ const GenreDetailsInfo = () => {
             {reviews.map(review => <Reviews key={review.id} review={review}/>)}
 
         </div>
-
     );
 };
 

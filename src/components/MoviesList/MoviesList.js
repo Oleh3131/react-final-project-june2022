@@ -10,19 +10,18 @@ import css from './MoviesList.module.css'
 
 const MoviesList = () => {
 
-    const {movies, loading, error,pageNumber} = useSelector(state => state.movieReducer);
+    const {movies, loading, error, pageNumber} = useSelector(state => state.movieReducer);
 
     const dispatch = useDispatch();
 
-    const [searchParams, setSearchParams] = useSearchParams({page:'1'});
-
+    const [searchParams, setSearchParams] = useSearchParams({page: '1'});
 
 
     const query = searchParams.get('query') || '';
 
     const page = searchParams.get('page');
 
-    const [currentPage,setCurrentPage] = useState(null);
+    const [currentPage, setCurrentPage] = useState(null);
 
     useEffect(() => {
 
@@ -30,33 +29,29 @@ const MoviesList = () => {
 
             dispatch(movieActions.search({query}));
 
-        } else if (searchParams=>"1" && searchParams<="500") {
+        } else if (searchParams => "1" && searchParams <= "500") {
 
 
             dispatch(movieActions.getAll({page}))
 
             setCurrentPage(pageNumber);
 
-
         }
 
-
-    }, [query,searchParams,currentPage])
-    
+    }, [query, searchParams, currentPage])
 
 
-    const prevPage=()=>{
+    const prevPage = () => {
 
-        setSearchParams(value=>({page:value.get('page')-1}))
+        setSearchParams(value => ({page: value.get('page') - 1}))
 
     }
 
-    const nextPage=()=>{
+    const nextPage = () => {
 
-        setSearchParams(value=>({page:+value.get('page')+1}))
+        setSearchParams(value => ({page: +value.get('page') + 1}))
 
     }
-
 
     return (
         <div className={css.MainMovieBlock}>
@@ -73,8 +68,12 @@ const MoviesList = () => {
                 </div>
 
                 <div className={css.ButtonBlock}>
-                    <button disabled={page==='1'} onClick={prevPage} className={css.PreviousButton}>Previous page</button>
-                    <button disabled={page==='500'} onClick={nextPage} className={css.NextButton}>Next page</button>
+                    <button disabled={page === '1'} onClick={prevPage}
+                            className={css.PreviousButton}>Previous page
+                    </button>
+                    <button disabled={page === '500'} onClick={nextPage}
+                            className={css.NextButton}>Next page
+                    </button>
                 </div>
 
             </div>

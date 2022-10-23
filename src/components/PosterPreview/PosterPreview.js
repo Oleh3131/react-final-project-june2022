@@ -63,7 +63,6 @@ const PosterPreview = ({oneMovie}) => {
                     <p>Vote count: {vote_count}</p>
                 </div>
 
-
             </div>
 
             <h2>Comments:</h2>

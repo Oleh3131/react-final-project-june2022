@@ -34,11 +34,11 @@
 .CardContentBlock > img {
 
     border-radius: 12px;
-    border-bottom:2px solid #f67070;
-    border-right:2px solid #f57c7c;
+    border-bottom:var(--border-bottom);
+    border-right:var(--border-right);
     padding-bottom:2px;
     padding-right:2px;
-    background: #f68787;
+    background:var(--background-color6);
 }
 
 .CardContentBlock > img:hover {

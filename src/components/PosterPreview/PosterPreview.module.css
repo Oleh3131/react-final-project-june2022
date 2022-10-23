@@ -1,5 +1,5 @@
 
-.MainCard{
+.MainCard {
 
     display: flex;
     flex-direction: column;
@@ -8,19 +8,19 @@
 
 }
 
-.MainCard >h2{
+.MainCard > h2 {
 
     color: yellow;
     margin-bottom: 40px;
 }
 
-.CardBlock{
+.CardBlock {
     display: flex;
     flex-direction: row;
     color: yellow;
     margin: 60px;
     padding: 60px;
-    background: #806c6c;
+    background: var(--background-color4);
     row-gap: 10px;
     column-gap: 60px;
     border-radius: 15px;
@@ -31,18 +31,18 @@
     text-shadow: none;
 }
 
-.ImgBlock{
+.ImgBlock {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.CardBlock img{
+.CardBlock img {
     width: 350px;
     border-radius: 12px;
 }
 
-.TextBlock{
+.TextBlock {
 
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@
 
 }
 
-.TextBlock>h1{
+.TextBlock > h1 {
 
     margin-bottom: 10px;
 

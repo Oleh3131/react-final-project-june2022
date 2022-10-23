@@ -4,8 +4,7 @@ import css from './Reviews.module.css'
 
 const Reviews = ({review}) => {
 
-    const {author,content,created_at} = review;
-
+    const {author, content, created_at} = review;
 
     return (
         <div className={css.MainReviewsBlock}>

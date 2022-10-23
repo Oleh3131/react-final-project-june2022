@@ -1,0 +1,35 @@
+
+html[data-theme='dark'] {
+
+    --background-color: linear-gradient(#ce361b 3%, rgb(5, 2, 2) 70%);
+    --background-image: url("./images/MainPicture.jpg");
+    --background-color2: #806c6c;
+    --background-color3: #3a3838;
+    --background-color4: #806c6c;
+    --background-color5: #ce361b;
+    --border: 2px solid yellow;
+    --box-shadow: 0 1px 4px rgba(234, 87, 87, 0.82), 0 0 30px rgba(243, 103, 103, 0.91) inset;
+    --border-bottom:2px solid #f67070;
+    --border-right:2px solid #f57c7c;
+    --background-color6: #f68787;
+    --background-color7: #ea8787;
+    --text-color:gold
+}
+
+
+html[data-theme='light']{
+
+    --background-color:  linear-gradient(#ffca1f 3%, rgb(8, 160, 238) 70%);
+    --background-image:url("./images/supergirl.jpg");
+    --background-color2: #427de7;
+    --background-color3: #ef9e5b;
+    --background-color4: #3272b9;
+    --background-color5: #de9f29;
+    --border: 2px solid red;
+    --box-shadow: 0 1px 4px rgb(7, 99, 161), 0 0 30px rgba(252, 208, 2, 0.91) inset;
+    --border-bottom:2px solid #fafafa;
+    --border-right:2px solid #fafafa;
+    --background-color6: #fafafa;
+    --background-color7: gold;
+    --text-color:snow
+}

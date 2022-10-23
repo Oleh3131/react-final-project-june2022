@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 import css from './Genre.module.css'
 
@@ -11,7 +11,7 @@ const Genre = ({genre}) => {
 
     return (
         <div className={css.GenreCard}>
-            <button onClick={()=>navigate(`${id}`,{state:{genre}})}>{name}</button>
+            <button onClick={() => navigate(`${id}`, {state: {genre}})}>{name}</button>
         </div>
     );
 };

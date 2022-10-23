@@ -20,7 +20,7 @@ const ListOfMoviesByGenre = () => {
 
     }, [id])
 
-    let nameOfGenre='';
+    let nameOfGenre = '';
 
     for (const movie of movies) {
 
@@ -32,7 +32,8 @@ const ListOfMoviesByGenre = () => {
     }
     return (
         <div className={css.BadgeCard}>
-            {movies.map(movie => <GenreBadge key={movie.id} movie={movie} nameOfGenre={nameOfGenre}/>)}
+            {movies.map(movie => <GenreBadge key={movie.id} movie={movie}
+                                             nameOfGenre={nameOfGenre}/>)}
         </div>
     );
 };

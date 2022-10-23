@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
 import {movieActions} from "../../redux";
@@ -14,15 +14,15 @@ const MovieListCard = () => {
 
     const dispatch = useDispatch();
 
-    useEffect(()=>{
+    useEffect(() => {
 
         dispatch(movieActions.getById({id}))
 
-    },[id])
+    }, [id])
 
     return (
         <div>
-            {oneMovie&&<PosterPreview oneMovie={oneMovie}/>}
+            {oneMovie && <PosterPreview oneMovie={oneMovie}/>}
         </div>
     );
 };

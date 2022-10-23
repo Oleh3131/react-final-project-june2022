@@ -22,7 +22,6 @@ const Header = () => {
 
     }, [])
 
-
     const ref = useRef();
 
     function onMouseDown(e) {
@@ -132,8 +131,6 @@ const Header = () => {
                 </div>
 
             </div>
-
-
         </div>
     );
 };

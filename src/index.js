@@ -5,6 +5,7 @@ import {Provider} from "react-redux";
 
 import {App} from './App';
 import {setUpStore} from "./redux";
+import './index.css'
 
 
 

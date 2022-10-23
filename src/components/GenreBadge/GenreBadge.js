@@ -1,11 +1,10 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 import {StarsRating} from "../StarsRating/StarsRating";
 import css from './GenreBadge.module.css'
 import {genreAction} from "../../redux";
-import {useNavigate} from "react-router-dom";
-
 
 
 const GenreBadge = ({movie,nameOfGenre}) => {
@@ -23,7 +22,6 @@ const GenreBadge = ({movie,nameOfGenre}) => {
         dispatch(genreAction.setAverage(vote_average));
 
     },[averageScore])
-
 
     return (
         <div className={css.GenreMainCard}>

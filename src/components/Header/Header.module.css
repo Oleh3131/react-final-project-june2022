@@ -26,7 +26,7 @@
     padding: 40px;
     box-sizing: border-box;
     column-gap: 40px;
-    background: #806c6c;
+    background: var(--background-color4);
     margin: 40px;
     border-radius: 20px;
     box-shadow: inset 0 0 20px rgb(255, 216, 26);
@@ -84,12 +84,12 @@ body, .HeaderList {
     margin: auto;
     box-sizing: border-box;
     padding: 20px;
-    background: #806c6c;
+    background: var(--background-color2);
     border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 20px rgb(255, 216, 26);
+    box-shadow: inset 0 0 40px rgb(255, 216, 26);
     outline: 1px solid;
     outline-color: rgba(243, 241, 241, 0.5);
     outline-offset: 0;
@@ -104,8 +104,9 @@ body, .HeaderList {
     column-gap: 20px;
     cursor: pointer;
     overflow-x: scroll;
-    background: #3a3838;
+    background: var(--background-color3);
     border-radius: 12px;
+    border: var(--border);
     padding: 10px;
 
 }

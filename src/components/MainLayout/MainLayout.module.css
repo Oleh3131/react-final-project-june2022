@@ -21,7 +21,7 @@ body {
 
     width: 100%;
     min-height: 100vh;
-    background-image: url("../../images/MainPicture.jpg");
+    background-image: var(--background-image);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -39,7 +39,7 @@ body {
     justify-content: space-evenly;
     width: 100%;
     min-height: 100px;
-    background: linear-gradient(#ce361b 3%, rgb(5, 2, 2) 70%);
+    background:var(--background-color);
 }
 
 
@@ -132,5 +132,38 @@ body {
     color: red;
     transition: 500ms;
 
+}
+
+
+.ButtonsSwitcherBlock{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.LightButton, .DarkButton{
+
+    width: 75px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+
+}
+
+.LightButton{
+    font-weight: bold;
+    border: 3px solid gold;
+    color: gold;
+}
+
+.DarkButton{
+    color: black;
+    font-weight: bold;
+    border: 3px solid black;
 }
 

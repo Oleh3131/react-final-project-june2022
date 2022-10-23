@@ -9,24 +9,23 @@ import css from './Genres.module.css'
 
 const Genres = () => {
 
-    const {genres,loading,error} = useSelector(state => state.genreReducer);
+    const {genres, loading, error} = useSelector(state => state.genreReducer);
 
     const dispatch = useDispatch();
-    
-    useEffect(()=>{
+
+    useEffect(() => {
 
         dispatch(genreAction.getAll());
-        
-    },[])
 
+    }, [])
 
     return (
         <div className={css.MainGenreBlock}>
 
             <div className={css.GenreBlock}>
-                {loading&&<h1>Loading...</h1>}
-                {error&&<h1>Error!!!</h1>}
-                {genres.map(genre=><Genre key={genre.id} genre={genre}/>)}
+                {loading && <h1>Loading...</h1>}
+                {error && <h1>Error!!!</h1>}
+                {genres.map(genre => <Genre key={genre.id} genre={genre}/>)}
             </div>
 
             <hr/>

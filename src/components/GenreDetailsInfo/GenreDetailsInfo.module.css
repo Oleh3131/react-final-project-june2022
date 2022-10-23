@@ -20,7 +20,7 @@
     color: yellow;
     margin: 60px;
     padding: 60px;
-    background: #806c6c;
+    background: var(--background-color4);
     row-gap: 10px;
     column-gap: 60px;
     border-radius: 15px;
