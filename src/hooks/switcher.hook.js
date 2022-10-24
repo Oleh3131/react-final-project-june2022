@@ -9,7 +9,7 @@ export const useTheme = () => {
 
         document.documentElement.setAttribute('data-theme', theme)
 
-        localStorage.setItem('theme',theme)
+        localStorage.setItem('app-theme',theme)
 
     }, [theme])
 
