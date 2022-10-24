@@ -12,8 +12,7 @@ const FormFilter = ({setSearchParams, query}) => {
     const {
         register,
         handleSubmit,
-        formState: {errors},
-        reset
+        formState: {errors}
     } = useForm({resolver: joiResolver(movieValidator), mode: 'all'});
 
     function submit(moVie) {
